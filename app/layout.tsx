@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Football Tournament | GSTU CSE',
@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-gray-100 min-h-screen pb-12`}>
+    <html lang="en" className="dark">
+      <body className={`${outfit.className} bg-[#202124] text-gray-200 min-h-screen pb-12`}>
         <Header />
         <Navigation />
         <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

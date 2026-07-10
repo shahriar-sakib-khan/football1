@@ -7,28 +7,32 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const tabs = [
+    { name: 'Overview', href: '/' },
     { name: 'Matches', href: '/' },
-    { name: 'Points Table', href: '/standings' },
-    { name: 'Statistics', href: '/stats' },
+    { name: 'Table', href: '/standings' },
+    { name: 'Stats', href: '/stats' },
   ];
 
   return (
-    <div className="bg-white border-b border-gray-200 sticky top-[72px] z-40">
+    <div className="sticky top-[61px] z-40 bg-[#202124] py-3 border-b border-[#3c4043]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="-mb-px flex space-x-8" aria-label="Tabs">
-          {tabs.map((tab) => {
-            const isActive = pathname === tab.href;
+        <nav className="flex space-x-2 overflow-x-auto no-scrollbar" aria-label="Tabs">
+          {tabs.map((tab, idx) => {
+            // Keep Matches as active on root, omit Overview for real routing or just keep Matches active
+            const isActive = tab.name !== 'Overview' && pathname === tab.href;
+            const isOverview = tab.name === 'Overview';
             return (
               <Link
-                key={tab.name}
+                key={idx}
                 href={tab.href}
                 className={`
-                  whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium transition-colors
+                  whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-colors
                   ${
                     isActive
-                      ? 'border-blue-600 text-blue-600'
-                      : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                      ? 'bg-[#e8eaed] text-[#202124]'
+                      : 'border border-[#5f6368] text-[#e8eaed] hover:bg-[#303134]'
                   }
+                  ${isOverview ? 'hidden' : ''}
                 `}
                 aria-current={isActive ? 'page' : undefined}
               >

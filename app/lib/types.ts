@@ -1,6 +1,6 @@
 export interface Goal {
   playerName: string;
-  minute?: number;
+  count?: number;
 }
 
 export interface Match {
@@ -14,7 +14,7 @@ export interface Match {
   status: 'SCHEDULED' | 'LIVE' | 'FULL_TIME';
   homeGoals?: Goal[];
   awayGoals?: Goal[];
-  manOfTheMatch?: string;
+  motm?: string;
 }
 
 export interface Standing {
@@ -33,5 +33,4 @@ export interface PlayerStat {
   name: string;
   team: string;
   goals: number;
-  assists: number;
 }
