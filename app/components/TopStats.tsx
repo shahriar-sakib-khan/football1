@@ -4,8 +4,7 @@ import { getTeamGradient } from '../lib/utils';
 export default function TopStats({ stats }: { stats: PlayerStat[] }) {
   const sortedStats = [...stats]
     .filter(s => s.goals > 0)
-    .sort((a, b) => b.goals - a.goals)
-    .slice(0, 5);
+    .sort((a, b) => b.goals - a.goals);
 
   return (
     <div className="bg-[#303134] rounded-2xl border border-[#3c4043] overflow-hidden mb-6">
