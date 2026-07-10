@@ -69,7 +69,7 @@ export default function MatchCard({ match }: { match: Match }) {
             {match.homeGoals?.map((goal, idx) => (
               <div key={idx} className="flex items-center gap-2 text-[#e8eaed]">
                 <span className="text-sm">{goal.playerName}</span>
-                <div className="flex gap-0.5 text-[#202124]">{renderFootballs(goal.count)}</div>
+                <div className="flex gap-0.5 text-[#202124]">{renderFootballs(goal.count || 1)}</div>
               </div>
             ))}
           </div>
@@ -77,7 +77,7 @@ export default function MatchCard({ match }: { match: Match }) {
             {match.awayGoals?.map((goal, idx) => (
               <div key={idx} className="flex items-center gap-2 text-[#e8eaed]">
                 <span className="text-sm">{goal.playerName}</span>
-                <div className="flex gap-0.5 text-[#202124]">{renderFootballs(goal.count)}</div>
+                <div className="flex gap-0.5 text-[#202124]">{renderFootballs(goal.count || 1)}</div>
               </div>
             ))}
           </div>
