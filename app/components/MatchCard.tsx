@@ -86,12 +86,12 @@ export default function MatchCard({ match }: { match: Match }) {
 
       {/* MOTM */}
       {match.motm && (
-        <div className="px-4 pb-3 pt-1 flex justify-center text-xs font-medium text-amber-500">
-          <span className="flex items-center gap-1.5 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-            <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        <div className="px-4 pb-4 pt-2 flex justify-center text-xs font-medium">
+          <span className="flex items-center gap-1.5 bg-[#202124] text-[#e8eaed] px-3 py-1.5 rounded-full border border-[#5f6368]">
+            <svg className="w-3.5 h-3.5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
-            MOTM: {match.motm}
+            <span className="text-[#9aa0a6]">MOTM:</span> {match.motm}
           </span>
         </div>
       )}
