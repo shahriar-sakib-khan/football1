@@ -28,11 +28,13 @@ export default function StandingsTable({ standings }: { standings: Standing[] })
           </thead>
           <tbody className="divide-y divide-[#3c4043]">
             {sortedStandings.map((team, idx) => (
-              <tr key={team.team} className="hover:bg-[#3c4043] transition-colors relative">
-                {idx < 2 && (
-                  <td className="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500" />
-                )}
-                <td className="px-4 py-3 whitespace-nowrap text-sm text-[#9aa0a6] pl-5">{idx + 1}</td>
+              <tr key={team.team} className="hover:bg-[#3c4043] transition-colors">
+                <td className="px-4 py-3 whitespace-nowrap text-sm text-[#9aa0a6] relative">
+                  {idx < 2 && (
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500" />
+                  )}
+                  {idx + 1}
+                </td>
                 <td className="px-4 py-3 whitespace-nowrap">
                   <div className="flex items-center gap-3">
                     <div className={`w-6 h-6 rounded bg-gradient-to-br ${getTeamGradient(team.team)} flex items-center justify-center text-[10px] font-bold text-white`}>
