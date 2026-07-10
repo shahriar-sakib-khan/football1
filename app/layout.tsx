@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${outfit.className} bg-[#202124] text-gray-200 min-h-screen pb-12`}>
+    <html lang="en">
+      <body className={`${outfit.className} min-h-screen pb-12`}>
         <Header />
         <Navigation />
         <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
