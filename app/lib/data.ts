@@ -40,12 +40,12 @@ export const MATCHES: Match[] = [
     time: '4:00 PM',
     homeTeam: 'Batch 13',
     awayTeam: 'Batch 11',
-    homeScore: 1,
-    awayScore: 2,
+    homeScore: 2,
+    awayScore: 1,
     status: 'FULL_TIME',
-    homeGoals: [{ playerName: 'Sadi', count: 1 }],
-    awayGoals: [{ playerName: 'Riad', count: 1 }, { playerName: 'Aninda', count: 1 }],
-    motm: 'Riad',
+    homeGoals: [{ playerName: 'Abu Riad', count: 1 }, { playerName: 'Aninda Raj', count: 1 }],
+    awayGoals: [{ playerName: 'Safi Al Sadi', count: 1 }],
+    motm: 'Abu Riad',
   },
   {
     id: '4',
@@ -57,7 +57,6 @@ export const MATCHES: Match[] = [
     awayScore: 0,
     status: 'FULL_TIME',
     homeGoals: [{ playerName: 'Iftikhar Tanvir', count: 1 }],
-    awayGoals: [],
     motm: 'Iftikhar Tanvir',
   },
   {
@@ -94,19 +93,19 @@ export const MATCHES: Match[] = [
 export const STANDINGS: Standing[] = [
   { team: 'Batch 12', played: 3, won: 3, drawn: 0, lost: 0, goalsFor: 7, goalsAgainst: 3, goalDifference: 4, points: 9 },
   { team: 'Batch 10', played: 2, won: 1, drawn: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDifference: 0, points: 3 },
-  { team: 'Batch 11', played: 2, won: 1, drawn: 0, lost: 1, goalsFor: 3, goalsAgainst: 4, goalDifference: -1, points: 3 },
-  { team: 'Batch 13', played: 3, won: 0, drawn: 0, lost: 3, goalsFor: 2, goalsAgainst: 5, goalDifference: -3, points: 0 },
+  { team: 'Batch 13', played: 3, won: 1, drawn: 0, lost: 2, goalsFor: 3, goalsAgainst: 4, goalDifference: -1, points: 3 },
+  { team: 'Batch 11', played: 2, won: 0, drawn: 0, lost: 2, goalsFor: 2, goalsAgainst: 5, goalDifference: -3, points: 0 },
 ];
 
 export const PLAYER_STATS: PlayerStat[] = [
   { name: 'Shijan Pias', team: 'Batch 12', goals: 3 },
-  { name: 'Iftikhar Tanvir', team: 'Batch 10', goals: 2 },
   { name: 'Shahriar Sakib', team: 'Batch 12', goals: 2 },
+  { name: 'Iftikhar Tanvir', team: 'Batch 10', goals: 2 },
   { name: 'Sakib Imtiaz', team: 'Batch 12', goals: 1 },
   { name: 'Antu Das', team: 'Batch 11', goals: 1 },
   { name: 'Fahim Gazi', team: 'Batch 12', goals: 1 },
-  { name: 'Sadi', team: 'Batch 13', goals: 1 },
-  { name: 'Riad', team: 'Batch 11', goals: 1 },
-  { name: 'Aninda', team: 'Batch 11', goals: 1 },
+  { name: 'Abu Riad', team: 'Batch 13', goals: 1 },
+  { name: 'Aninda Raj', team: 'Batch 13', goals: 1 },
+  { name: 'Safi Al Sadi', team: 'Batch 11', goals: 1 },
   { name: 'Sami', team: 'Batch 13', goals: 1 },
 ];
