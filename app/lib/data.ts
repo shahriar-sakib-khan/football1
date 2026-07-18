@@ -78,23 +78,34 @@ export const MATCHES: Match[] = [
     time: '9:00 AM',
     homeTeam: 'Batch 11',
     awayTeam: 'Batch 10',
-    status: 'SCHEDULED',
+    homeScore: 0,
+    awayScore: 1,
+    status: 'FULL_TIME',
+    awayGoals: [{ playerName: 'Anamul', count: 1 }],
+    motm: 'Anamul',
   },
   {
     id: '7',
-    date: 'TBD',
+    date: '13 July 2026',
     time: 'TBD',
-    homeTeam: 'TBD',
-    awayTeam: 'TBD',
-    status: 'SCHEDULED',
+    homeTeam: 'Batch 12',
+    awayTeam: 'Batch 10',
+    homeScore: 0,
+    awayScore: 0,
+    homePenaltyScore: 3,
+    awayPenaltyScore: 1,
+    status: 'FULL_TIME',
+    homePenaltyScorers: ['sakib shahriar', 'a.h. soral', 'seyam'],
+    awayPenaltyScorers: ['Shihab'],
+    motm: 'a.h. soral',
   },
 ];
 
 export const STANDINGS: Standing[] = [
-  { team: 'Batch 12', played: 3, won: 3, drawn: 0, lost: 0, goalsFor: 7, goalsAgainst: 3, goalDifference: 4, points: 9 },
-  { team: 'Batch 10', played: 2, won: 1, drawn: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDifference: 0, points: 3 },
+  { team: 'Batch 12', played: 4, won: 3, drawn: 1, lost: 0, goalsFor: 7, goalsAgainst: 3, goalDifference: 4, points: 10 },
+  { team: 'Batch 10', played: 4, won: 2, drawn: 1, lost: 1, goalsFor: 3, goalsAgainst: 2, goalDifference: 1, points: 7 },
   { team: 'Batch 13', played: 3, won: 1, drawn: 0, lost: 2, goalsFor: 3, goalsAgainst: 4, goalDifference: -1, points: 3 },
-  { team: 'Batch 11', played: 2, won: 0, drawn: 0, lost: 2, goalsFor: 2, goalsAgainst: 5, goalDifference: -3, points: 0 },
+  { team: 'Batch 11', played: 3, won: 0, drawn: 0, lost: 3, goalsFor: 2, goalsAgainst: 6, goalDifference: -4, points: 0 },
 ];
 
 export const PLAYER_STATS: PlayerStat[] = [
@@ -108,4 +119,5 @@ export const PLAYER_STATS: PlayerStat[] = [
   { name: 'Aninda Raj', team: 'Batch 13', goals: 1 },
   { name: 'Safi Al Sadi', team: 'Batch 11', goals: 1 },
   { name: 'Sami', team: 'Batch 13', goals: 1 },
+  { name: 'Anamul', team: 'Batch 10', goals: 1 },
 ];

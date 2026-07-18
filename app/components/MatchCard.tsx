@@ -41,10 +41,15 @@ export default function MatchCard({ match }: { match: Match }) {
         {/* Center Score or Time */}
         <div className="flex flex-col items-center justify-center flex-1 shrink-0 px-2">
           {isFullTime ? (
-            <div className="flex items-center gap-3 sm:gap-4 text-3xl font-medium text-gray-900 dark:text-[#e8eaed]">
-              <span>{match.homeScore}</span>
-              <span className="text-gray-300 dark:text-[#9aa0a6] text-xl">-</span>
-              <span>{match.awayScore}</span>
+            <div className="flex flex-col items-center gap-0.5">
+              <div className="flex items-center gap-3 sm:gap-4 text-3xl font-medium text-gray-900 dark:text-[#e8eaed]">
+                <span>{match.homeScore}</span>
+                <span className="text-gray-300 dark:text-[#9aa0a6] text-xl">-</span>
+                <span>{match.awayScore}</span>
+              </div>
+              {match.homePenaltyScore !== undefined && match.awayPenaltyScore !== undefined && (
+                <div className="text-sm text-gray-500 font-semibold whitespace-nowrap">({match.homePenaltyScore} - {match.awayPenaltyScore} pens)</div>
+              )}
             </div>
           ) : (
             <div className="text-center">
@@ -63,13 +68,18 @@ export default function MatchCard({ match }: { match: Match }) {
       </div>
       
       {/* Goal Scorers */}
-      {isFullTime && (match.homeGoals?.length || match.awayGoals?.length) && (
+      {isFullTime && (match.homeGoals?.length || match.awayGoals?.length || match.homePenaltyScorers?.length || match.awayPenaltyScorers?.length) ? (
         <div className="px-4 pb-3 pt-1 flex justify-between">
           <div className="flex-1 flex flex-col gap-1.5 items-start">
             {match.homeGoals?.map((goal, idx) => (
               <div key={idx} className="flex items-center gap-2 text-gray-700 dark:text-[#e8eaed]">
                 <span className="text-sm">{goal.playerName}</span>
                 <div className="flex gap-0.5 text-gray-800 dark:text-[#202124]">{renderFootballs(goal.count || 1)}</div>
+              </div>
+            ))}
+            {match.homePenaltyScorers?.map((scorer, idx) => (
+              <div key={`hp-${idx}`} className="flex items-center gap-2 text-gray-500 dark:text-[#9aa0a6]">
+                <span className="text-sm">{scorer} (P)</span>
               </div>
             ))}
           </div>
@@ -80,9 +90,14 @@ export default function MatchCard({ match }: { match: Match }) {
                 <div className="flex gap-0.5 text-gray-800 dark:text-[#202124]">{renderFootballs(goal.count || 1)}</div>
               </div>
             ))}
+            {match.awayPenaltyScorers?.map((scorer, idx) => (
+              <div key={`ap-${idx}`} className="flex items-center gap-2 text-gray-500 dark:text-[#9aa0a6]">
+                <span className="text-sm">{scorer} (P)</span>
+              </div>
+            ))}
           </div>
         </div>
-      )}
+      ) : null}
 
       {/* MOTM */}
       {match.motm && (

@@ -11,9 +11,13 @@ export interface Match {
   awayTeam: string;
   homeScore?: number;
   awayScore?: number;
+  homePenaltyScore?: number;
+  awayPenaltyScore?: number;
   status: 'SCHEDULED' | 'LIVE' | 'FULL_TIME';
   homeGoals?: Goal[];
   awayGoals?: Goal[];
+  homePenaltyScorers?: string[];
+  awayPenaltyScorers?: string[];
   motm?: string;
 }
 
