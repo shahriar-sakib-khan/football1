@@ -10,8 +10,8 @@ export const TEAMS = [
 export const MATCHES: Match[] = [
   {
     id: '1',
-    date: '9 July 2026',
-    time: '5:00 PM',
+    date: '16 July 2026',
+    time: '6:00 AM',
     homeTeam: 'Batch 11',
     awayTeam: 'Batch 12',
     homeScore: 1,
@@ -23,8 +23,8 @@ export const MATCHES: Match[] = [
   },
   {
     id: '2',
-    date: '9 July 2026',
-    time: '6:00 PM',
+    date: '16 July 2026',
+    time: '7:00 AM',
     homeTeam: 'Batch 12',
     awayTeam: 'Batch 10',
     homeScore: 2,
@@ -36,8 +36,8 @@ export const MATCHES: Match[] = [
   },
   {
     id: '3',
-    date: '12 July 2026',
-    time: '4:00 PM',
+    date: '16 July 2026',
+    time: '3:00 PM',
     homeTeam: 'Batch 13',
     awayTeam: 'Batch 11',
     homeScore: 2,
@@ -49,8 +49,8 @@ export const MATCHES: Match[] = [
   },
   {
     id: '4',
-    date: '12 July 2026',
-    time: '5:00 PM',
+    date: '16 July 2026',
+    time: '4:00 PM',
     homeTeam: 'Batch 10',
     awayTeam: 'Batch 13',
     homeScore: 1,
@@ -61,8 +61,8 @@ export const MATCHES: Match[] = [
   },
   {
     id: '5',
-    date: '12 July 2026',
-    time: '6:00 PM',
+    date: '17 July 2026',
+    time: '6:00 AM',
     homeTeam: 'Batch 13',
     awayTeam: 'Batch 12',
     homeScore: 1,
@@ -74,8 +74,8 @@ export const MATCHES: Match[] = [
   },
   {
     id: '6',
-    date: '13 July 2026',
-    time: '9:00 AM',
+    date: '17 July 2026',
+    time: '7:00 AM',
     homeTeam: 'Batch 11',
     awayTeam: 'Batch 10',
     homeScore: 0,
@@ -86,8 +86,8 @@ export const MATCHES: Match[] = [
   },
   {
     id: '7',
-    date: '13 July 2026',
-    time: 'TBD',
+    date: '17 July 2026',
+    time: '3:00 PM',
     homeTeam: 'Batch 12',
     awayTeam: 'Batch 10',
     homeScore: 0,
@@ -95,9 +95,9 @@ export const MATCHES: Match[] = [
     homePenaltyScore: 3,
     awayPenaltyScore: 1,
     status: 'FULL_TIME',
-    homePenaltyScorers: ['sakib shahriar', 'a.h. soral', 'seyam'],
+    homePenaltyScorers: ['Shahriar Sakib', 'A.H. Soral', 'Seyam'],
     awayPenaltyScorers: ['Shihab'],
-    motm: 'a.h. soral',
+    motm: 'A.H. Soral',
   },
 ];
 
